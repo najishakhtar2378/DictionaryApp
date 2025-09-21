@@ -1,0 +1,208 @@
+:root{
+    --header-color:#a9dce3;
+   --bcg-color:#7689de;
+    --padding: 20px;
+    --text-color:rgb(64, 58, 58);
+
+
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+  background-color:var(--bcg-color);
+  color: aliceblue;
+  width: 100vw;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+header{
+    background-color: var(--header-color);
+    padding: var(--padding);
+    color: var(--text-color);
+}
+header h1{
+    font-size: 3rem;
+}
+main{
+    padding: var(--padding);
+    min-height:70vh;
+    max-width: 800px;
+    margin: 0px auto;
+}
+main form{
+    display: flex;
+    justify-content: center;
+
+}
+form input[type="text"],button[type="submit"]{
+    border-radius: 4px;
+    border: none;
+    font-size: 25px;
+    font-weight: 500;
+    
+}
+form input[type="text"]{
+    flex-grow: 1;
+    margin-right:8px;
+}
+footer{
+    padding: var(--padding);
+    background-color:#B7B1F2;
+    text-align: center;
+    height: 110px;
+    width: 100%;
+    position: fixed;
+    font-size: 13px;
+    color: black;
+}
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 7px;
+}
+
+.footer-content p {
+    font-size: 14px;
+    
+}
+
+.footer-content a {
+    display: inline-block;
+    margin: 0 10px; /* Adds spacing between icons */
+    transition: transform 0.3s ease-in-out;
+}
+
+.footer-content a img {
+    width: 25px; /* Smaller and balanced size */
+    height: 25px;
+    filter: brightness(0) invert(1); /* Makes icons white for dark backgrounds */
+}
+
+.footer-content a:hover {
+    transform: scale(1.2); /* Adds a smooth zoom effect on hover */
+}
+
+.footer-bottom {
+    margin-top: 10px;
+    font-size: 12px;
+    opacity: 0.7;
+}
+
+button[type="submit"]{
+    background-color: var(--header-color);
+    color: var(--text-color);
+    font-size: 100%;
+    padding: 10px 20px;  /* Controls the size */
+    border: none;        /* Removes default border */
+    border-radius: 5px;  /* Smooth edges */
+    cursor: pointer;
+    text-align: center;  /* Ensures text is centered */
+    width: auto;         /* Prevents button from capturing the whole width */
+    display: inline-block; /* Keeps button size based on content */
+}
+
+.result{
+    background-color: white;
+    min-height:50vh;
+    max-width: 800px;
+    padding: var(--padding);
+    margin-top: 10px ;
+    color: black;
+    font-weight: 500;
+    border-radius: 5px;
+    display: block;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.4); 
+
+}
+.result:hover {
+    box-shadow: 0px 12px 25px rgba(0, 0, 0, 0.4); 
+}
+.result a{
+    text-decoration: none;
+   font-weight: 800;
+   font-weight: bold; 
+    color: rgb(0, 26, 83);
+    
+}
+
+.error-img {
+    width: 200px; /* Responsive width */
+    max-width: 300px; /* Limits max size */
+    height: 240px; /* Maintains aspect ratio */
+    display: block; /* Centers image */
+    margin: 25px auto; /* Centers and adds spacing */
+}
+@media screen  and (max-width:432px){
+    main form{
+        display: block;
+    }
+    form button[type="submit"]{
+        margin-left: 0px;
+        margin-top: 10px;
+        width: 390px;
+    }
+    form input[type="text"]{
+        flex-grow: 1;
+        width: 390px;
+        
+    }
+    .error-img {
+        width: 90%; 
+        max-width: 250px; 
+        margin-top: 15px; 
+    }
+
+}
+
+
+@media screen  and (max-width:412px){
+    main form{
+        display: block;
+    }
+    form button[type="submit"]{
+        margin-left: 0px;
+        margin-top: 10px;
+        width: 373px;
+    }
+    form input[type="text"]{
+        flex-grow: 1;
+        width: 373px;
+        
+    }
+    footer{
+        width: 95%;
+        height: auto;
+        margin-left: 10px;
+    }
+    .error-img {
+        width: 90%; 
+        max-width: 250px; 
+        margin-top: 15px; 
+    }
+
+}
+
+
+@media screen  and (max-width:360px){
+    footer{
+        height: 153px;
+        width: 88%;
+        margin: 0px 0px 0px 20px;
+    }
+    form input[type="text"] {
+        flex-grow: 1;
+        width: 323px;
+    }
+    form button[type="submit"] {
+        margin-left: 0px;
+        margin-top: 10px;
+        width: 323px;
+    }
+}
